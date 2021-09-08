@@ -96,9 +96,9 @@ def add_users_to_group():
             print("Waiting 60 Seconds...")
             time.sleep(60)
         except PeerFloodError:
-            print("Getting Flood Error from Telegram. You should stop script now.Please try again after some time.")
+            print("Obtendo o erro de inundação do telegrama. Você deve parar o script agora. Por favor, tente novamente depois de algum tempo.")
         except UserPrivacyRestrictedError:
-            print("The user's privacy settings do not allow you to do this. Skipping.")
+            print("As configurações de privacidade do usuário não permitem que você faça isso. Pulando.")
         except:
             traceback.print_exc()
             print("Unexpected Error")
@@ -130,7 +130,7 @@ def list_users_in_group():
         except:
             continue
     
-    print('Choose a group to scrape members from:')
+    print('Escolha um grupo do qual remover membros:')
     i=0
     for g in groups:
         print(str(i) + '- ' + g.title)
